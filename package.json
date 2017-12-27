@@ -3,12 +3,9 @@
   "version": "0.0.1",
   "description": "ORTC Streams Demo",
   "scripts": {
+    "postinstall": "cd streams/reference-implementation && npm install",
     "start": "watchify streams.js -o streams.out.js"
   },
-  "keywords": [
-    "ortc",
-    "streams"
-  ],
   "author": "Lennart Grahl <lennart.grahl@gmail.com>",
   "license": "MIT",
   "private": true,

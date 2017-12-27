@@ -1,9 +1,9 @@
 "use strict";
 
-const { ReadableStream } = require("streams/reference-implementation/lib/readable-stream.js");
-const { WritableStream } = require("streams/reference-implementation/lib/writable-stream.js");
-const { TransformStream } = require("streams/reference-implementation/lib/transform-stream.js");
-const ByteLengthQueuingStrategy = require("node_modules/streams/reference-implementation/lib/byte-length-queuing-strategy.js");
+const { ReadableStream } = require("./streams/reference-implementation/lib/readable-stream.js");
+const { WritableStream } = require("./streams/reference-implementation/lib/writable-stream.js");
+const { TransformStream } = require("./streams/reference-implementation/lib/transform-stream.js");
+const ByteLengthQueuingStrategy = require("./streams/reference-implementation/lib/byte-length-queuing-strategy.js");
 
 const getUrlParameter = (name) => {
     return decodeURIComponent((new RegExp("[?|&]" + name + "=" + "([^&;]+?)(&|#|;|$)").exec(location.search) || [null, ""])[1].replace(/\+/g, "%20")) || null;
